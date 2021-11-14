@@ -5,7 +5,7 @@ class ApplicationController < ActionController::API
    JWT.encode({user_id: user_id}, ENV["JWT_SECRET"])
     end
 
-  def loggen_in_user
+  def logged_in_user
   User.find(decoded_token["user_id"])
   end
     private
