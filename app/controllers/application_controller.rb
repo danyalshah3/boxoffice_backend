@@ -15,6 +15,6 @@ class ApplicationController < ActionController::API
     end
 
     def decoded_token
-    JWT.decode(get_token, ENV["JWT_SECRET"])[0]
+     JWT.decode(get_token, ENV["JWT_SECRET"])[0]
     end
 end
