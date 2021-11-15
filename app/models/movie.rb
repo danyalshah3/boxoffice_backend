@@ -1,4 +1,6 @@
 class Movie < ApplicationRecord
+    has_many :transations
+    has_many :users, through: :transations
 
 
 
