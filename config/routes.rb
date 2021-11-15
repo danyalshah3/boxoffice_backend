@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :transations
   resources :users
   resources :movies
   resources :sessions, only: [:create]
