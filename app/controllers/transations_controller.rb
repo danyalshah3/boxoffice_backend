@@ -26,16 +26,16 @@ class TransationsController < ApplicationController
  end
 
  def update
-    transaction = Transaction.find(params[:id])
-    if transaction.update(transaction_params)
-      render json: transaction.to_json
+    transation = Transation.find(params[:id])
+    if transation.update(transaion_params)
+      render json: transation.to_json
     else
-      render json: transaction.errors, status: :unprocessable_entity
+      render json: transation.errors, status: :unprocessable_entity
     end 
   end
 
   def destroy
-    transaction.destroy(params[:id])
+    transation.destroy(params[:id])
   end
 
 
