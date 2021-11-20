@@ -121,3 +121,5 @@ film_arr.each do |imdb_id|
     i += 1
     puts (imdb_id)
 end 
+
+# Movie.first.transations.create(user: User.first)

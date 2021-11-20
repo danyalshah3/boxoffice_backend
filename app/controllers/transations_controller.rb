@@ -8,22 +8,17 @@ class TransationsController < ApplicationController
     end
 
 
-    def show
-        transation = Transation.find(params[id])
-        render json: transation
-    end
+    # def show
+    #     transation = Transation.find(params[id])
+    #     render json: transation
+    # end
 
 
 
     def create 
-  transations = Transations.create(transation_params)
-  if transations.valid?
-  render json: transations
-
-  else
-    render json: {errors: transations.errors.full_messages.to_sentence}, status: :unprocessable_entity
-  end
- end
+        transation = logged_in_user.create!(transation_params)
+        render json: transation
+    end
 
  def update
     transation = Transation.find(params[:id])

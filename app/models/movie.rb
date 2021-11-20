@@ -1,6 +1,7 @@
 class Movie < ApplicationRecord
     has_many :transations
     has_many :users, through: :transations
+    # has_many :transations, through: :transations, source: :user
 
 
 

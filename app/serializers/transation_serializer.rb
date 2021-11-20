@@ -1,5 +1,9 @@
 class TransationSerializer < ActiveModel::Serializer
-  attributes :id, :user, :movie
+  attributes :id, :movie
   # has_one :user
   has_one :movie
+
+
+ 
+
 end
