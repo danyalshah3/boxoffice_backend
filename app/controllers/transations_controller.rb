@@ -8,15 +8,8 @@ class TransationsController < ApplicationController
     end
 
 
-    # def show
-    #     transation = Transation.find(params[id])
-    #     render json: transation
-    # end
-
-
-
     def create 
-        transation = logged_in_user.create!(transation_params)
+        transation = Transation.create!(transation_params)
         render json: transation
     end
 
