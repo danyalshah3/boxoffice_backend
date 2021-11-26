@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :users, only: [:index, :show, :create] do
-    resources :transations
-  end
+  resources :users, only: [:index, :show, :create] 
+  resources :transations
+  
   resources :movies
   resources :sessions, only: [:create]
   get "/me", to: 'sessions#autologin'
