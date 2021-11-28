@@ -9,9 +9,10 @@ module Types
 
     # TODO: remove me
     field :movies, [MovieType], null: false, description: "A list of movies" do
-      argument :id, ID, required: false
-    def movies
-     Movie.all
+      argument :title, String, required: false
+    def movies(title: nill)
+     Movie.search(title)
     end
   end
+ end
 end
