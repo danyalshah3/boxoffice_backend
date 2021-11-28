@@ -7,6 +7,10 @@ class TransationsController < ApplicationController
         render json: transations
     end
 
+    def show
+        transation = Transation.find(params[:id])
+      render json: transation
+    end
 
     def create 
         transation = Transation.create!(transation_params)
@@ -23,7 +27,7 @@ class TransationsController < ApplicationController
   end
 
   def destroy
-    transation.destroy(params[:id])
+    Transation.destroy(params[:id])
   end
 
 
