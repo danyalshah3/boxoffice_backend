@@ -8,11 +8,13 @@ module Types
     # They will be entry points for queries on your schema.
 
     # TODO: remove me
-    field :movies, [MovieType], null: false, description: "A list of movies" do
-      argument :title, String, required: false
-    def movies(title: nill)
-     Movie.search(title)
+    field :movies, [MovieType], null: false, description: "A list of movies" 
+  #    argument :title, String, required: false
+  #  end
+ 
+    def movies
+     Movie.all
+
     end
-  end
  end
 end
