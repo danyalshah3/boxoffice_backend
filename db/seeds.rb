@@ -94,6 +94,7 @@ i = 0
 puts 'Getting movies...'
 film_arr.each do |imdb_id|
       youtube_video = youtube_vids[i]
+      # request_url = "http://www.omdbapi.com/?i=#{imdb_id}&#{ENV["OMDB_API_KEY"]}"
       request_url = "http://www.omdbapi.com/?i=#{imdb_id}&#{ENV["OMDB_API_KEY"]}"
       request = RestClient::Request.execute(
         method: :get,
