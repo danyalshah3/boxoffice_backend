@@ -13,7 +13,7 @@ class TransationsController < ApplicationController
     end
 
     def create 
-        transation = Transation.create!(transation_params)
+        transation = Transation.create(transation_params)
         render json: transation
     end
 
