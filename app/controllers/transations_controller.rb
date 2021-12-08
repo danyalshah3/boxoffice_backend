@@ -1,7 +1,6 @@
 class TransationsController < ApplicationController
 
 
-
     def index
         transations = Transation.all
         render json: transations
@@ -9,13 +8,16 @@ class TransationsController < ApplicationController
 
     def show
         transation = Transation.find(params[:id])
-      render json: transation
+        render json: transation
     end
 
     def create 
-        transation = Transation.create(transation_params)
+      movie = Movie.find(params[:movie_id])
+      user = logged_in_user
+      transation = Transation.create!(user_id: user.id, movie_id: movie.id)
         render json: transation
     end
+
 
  def update
     transation = Transation.find(params[:id])
@@ -34,7 +36,8 @@ class TransationsController < ApplicationController
     private
 
     def transation_params
-  params.permit(:user_id, :movie_id)
-
+      params.require(:transation).permit(:user_id, :movie_id)
     end
+
+
 end
