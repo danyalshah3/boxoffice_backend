@@ -1,4 +1,4 @@
-Initialized with: rails new flunchiron-backend --database=postgresql --api Frontend initialized with: npx create-react-app flunchiron-frontend
+Initialized with: rails new boxoffice-backend --database=postgresql --api Frontend initialized with: npx create-react-app boxoffice-frontend
 
 You should use --database=postgresql so that its easy for you to deploy the application on heroku. 
 
