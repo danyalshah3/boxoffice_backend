@@ -86,7 +86,6 @@ GEM
     ffi (1.15.4)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    graphql (1.13.2)
     http-accept (1.7.0)
     http-cookie (1.0.4)
       domain_name (~> 0.5)
@@ -195,7 +194,6 @@ DEPENDENCIES
   byebug
   dotenv-rails (~> 2.7)
   faker
-  graphql
   jwt (~> 2.3)
   listen (~> 3.3)
   pg (~> 1.1)
